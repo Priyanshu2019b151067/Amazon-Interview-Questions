@@ -8,18 +8,18 @@ public:
         if (sum % 3 != 0) {
             return false;
         }
-        int part = 0;
+        int c_S = 0;
         int count = 0;
         for (int num : A) {
-            part += num;
-            if (part == sum / 3) {
-                part = 0;
+            c_S += num;
+            if (c_S == sum/3){
                 count++;
-                if (count == 3) {
+                if(count == 3){
                     return true;
                 }
+                c_S = 0;
             }
-        }
+        } 
         return false;
     }
 };
